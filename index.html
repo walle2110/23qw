@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Telegram Bot 21.1.0</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			outline: none;
+		}
+	</style>
+</head>
+<body>
+	<input type="text" class="message">
+	<button>Send</button>
+	
+	<script>
+		document.querySelector('button').onclick = function() {
+			let message = document.querySelector('.message').value;
+			const token = '1021278967:AAEHG6m9TMaJcEAhRNMeLSdB_rx0pu2Mtss';
+			let url = 'https://api.telegram.org/bot' + token + '/sendMessage?chat_id=-477374635text=';
+			let xhttp = new XMLHttpRequest();
+			xhttp.open("GET", url + message, true);
+			xhttp.send();
+		}
+	</script>
+</body>
+</html>
